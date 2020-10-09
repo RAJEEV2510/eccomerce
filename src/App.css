@@ -1,38 +1,252 @@
-.App {
-  text-align: center;
+*{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-family: 'Times New Roman', Times, serif;
+}
+:root{
+
+  --mainColor:#f57224;
+  --whiteColor:#fff;
+  --blackColor:#000;
+  --lightDark:#222;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav{
+  width: 100%;
+  height: 100px;
+  line-height: 50px;
+  padding:20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+
+}
+.left{
+  text-align: left;
+}
+.right{
+  text-align: right;
+}
+.left li,.right li{
+  list-style-type: none;
+
+}
+
+.left li a ,.right  li a{
+  text-decoration: none;
+  color:var(--mainColor);
+  font-size: 30px;
+  font-weight: 900;
+}
+.shopingCart{
+  color: blueviolet;
+}
+.cartCount{
+  background-color: blueviolet;
+  border-radius: 20%;
+  padding: 4px;
+
+  width: 35px;
+  height: 35px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.banner{
+  height: 300px;
+  width: 100%;
+  background-image: url('./banner.jpg');
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: fixed;
+
+}
+.headerText{
+
+position: relative;
+color: white;
+top:50px;
+text-align: center;
+font-size: large;
+font-family: cursive;
+text-transform: capitalize;
+font-weight: 900;
+background-color: rgba(0, 0, 0, .4);
+padding-bottom: 20px;
+width: 40vmax;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.products{
+
+display: flex;  
+flex-wrap: wrap;
+justify-content: space-around;
+margin-top: 50px;
+margin-bottom: 50px;
+
+}
+.product{
+  height: 300px;
+  position: relative;
+  margin-bottom: 30px;
+}
+.product-image{
+
+  height: 200px;
+  width: 200px;
+}
+
+.product-details{
+  padding:0px 15px;
+  text-align: center;
+  margin-top: 20px;
+}
+.product-name{
+  font-size: larger;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+.product-price{
+  margin-top: 10px;
+}
+
+.add-to-cart{
+margin-top: 10px;
+  background-color:var(--mainColor);
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+font-family: cursive;
+}
+.Hot{
+
+  background-color: var(--mainColor);
+  color: #fff;
+  position: absolute;
+  top:0px;
+  font-family: cursive;
+  text-align: center;
+  font-weight: 900;
+  width: 50px;
+
+}
+.New{
+  background-color: violet;
+  color: #fff;
+  font-family: cursive;
+  position: absolute;
+  font-weight: 900;
+  top:0px;
+  text-align: center;
+  width: 50px;
+
+}
+.image-product{
+
+  height: 200px;
+  width:200px;
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 200px;
+  justify-content: space-between;
+  padding: 100px;
+}
+.product-detailss{
+
+  display: flex;
+  width: 400px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.add-cart-button{
+  padding: 5px;
+  background-color: yellow;
+  border: 2px solid grey;
+  border-radius: 5px;
+  width: 150px;
+  cursor: pointer;
+  
+}
+.cart-details{
+width: 70%;
+float: left;
+
+
+}
+.cart{
+  margin-top: 50px;
+  box-shadow: 10px 10px 4px whitesmoke;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+.cart-image >img{
+  height: 150px;
+  width: 150px;
+  border-radius: 20px;
+
+}
+.cart-name{
+  font-size: 20px;
+  font-weight: 900;
+
+}
+.cart-price{
+  font-size: 20px;
+  font-weight: 900;
+
+}
+.increase,.decrease{
+  font-size: 40px;
+  color: yellow;
+  border: 2px solid rgb(211, 95, 17);
+  background-color: blueviolet;
+  height: 40px;
+  padding:10px;
+  line-height: 20px;
+  font-weight: 900;
+  cursor: pointer;
+}
+.decrease{
+  color:yellow;
+}
+.product-quantity{
+  font-size: 20px;
+  font-weight: 900;
+}
+.delete{
+  font-size: 30px;
+  font-weight: 900;
+  color:red;
+  cursor: pointer;
+}
+
+.cart-summary{
+  margin-top: 100px;
+padding: 20px;
+margin-bottom: 40px;
+border: 2px solid gray;
+display: inline-block;
+width: 300px;
+margin-left: 50px;
+}
+.total-items{
+display:flex;
+justify-content: space-between;
+color: #f57224;
+}
+.total-price{
+
+  display:flex;
+  justify-content: space-between;
+  color: #f57224;
 }
